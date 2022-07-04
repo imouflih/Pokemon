@@ -1,16 +1,11 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+import Home from "./components/Home.vue";
+import Details from "./components/Details.vue";
 </script>
 
 <template>
-  <header>
-    <div>
-      <HelloWorld />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <Home />
+    <Details />
   </main>
 </template>
