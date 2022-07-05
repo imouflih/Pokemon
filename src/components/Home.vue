@@ -1,7 +1,11 @@
 <!--sprites -> other -> dream-world-->
 <template>
-  <div class="element" v-for="pokemon in pokemonList" v-bind:key="pokemon">
-    <a bind-href="'#/'id"><img v-bind:src="pokemon.urlImage" /></a>
+  <div class="list">
+    <div class="element box" v-for="(pokemon, key) in pokemonList">
+      <router-link :to="{ name: 'Details', params: { id: key } }">
+        <img :src="pokemon.urlImage" />
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -49,7 +53,6 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-    console.log(this.pokemonList);
   },
 };
 </script>

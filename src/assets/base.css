@@ -11,7 +11,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -20,16 +19,29 @@ body {
   color: var(--light);
 }
 
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  padding-top: 10px;
+}
+
 .App {
   padding: 32px;
 }
 
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
 .element {
   font-size: 18px;
   color: var(--light-alt);
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 16px;
   position: relative;
   background-color: var(--dark);
   padding: 16px;
@@ -37,9 +49,12 @@ body {
   display: flex;
   align-items: center;
   transition: 0.5s;
-  cursor: pointer;
-  margin-bottom: 16px;
+  margin: 16px;
+  flex-direction: column;
 }
-.element:hover {
-  opacity: 0.8;
+.box {
+  cursor: pointer;
+}
+.box:hover {
+  opacity: 0.7;
 }

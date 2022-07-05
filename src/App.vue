@@ -1,11 +1,10 @@
-<script setup>
+<!--<script setup>
 import Home from "./components/Home.vue";
 import Details from "./components/Details.vue";
-</script>
+</script>-->
 
 <template>
   <main>
-    <Home />
-    <Details />
+    <router-view></router-view>
   </main>
 </template>
