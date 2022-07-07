@@ -21,7 +21,6 @@ export default {
           return {
             name: "",
             urlImage: "",
-            abilities: [],
           };
         }),
     };
@@ -40,9 +39,6 @@ export default {
             .then((res) => {
               currElement.urlImage =
                 res.data.sprites.other.dream_world.front_default;
-              res.data.abilities.map((currentElement) => {
-                this.pokemonList[index].abilities.push(currentElement.ability);
-              });
             })
             .catch((error) => {
               console.log(error);
